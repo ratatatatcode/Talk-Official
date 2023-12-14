@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="container">
+        <div style="margin: 40px;" id="quote-container"></div>
+        <h1>Share What's On Your Mind...</h1>
+        <i>No one will know it's you.</i>
+
+        <form class="form-1" action="/" method="post">
+            <!-- <textarea name="content" rows="10" placeholder="Don't forget to smile before you leave this website."></textarea> -->
+            <textarea required oninput="enforceMaxLength(this, 150)" name="content" rows="10" placeholder="Don't forget to smile before you leave this website."></textarea>
+            <button input="submit">Submit</button>
+        </form>
+        
+        <p><%= status %></p>
+
+        <div class="grid-container">
+            <% if (contentData.length > 0) { %>
+                <% for (const content of contentData) { %>
+                    <div class="message-box">
+                        <p style="color: rgb(125, 125, 125);"><%= content.ID %></p>
+                        <p class="content-message"><%= content.Content %></p>
+                    </div>
+                <% } %>
+            <% } else { %>
+                <div class="message-box">
+                    <p>No data available.</p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <script>
+        const quotes = [
+            "Always try to smile even when you are in pain. Trust me it will heal you.",
+            "Life is not a race. You're not competing with anyone for your goals.",
+            "Love is crazy. It makes us foolish, but love is not everything.",
+            "Find time to rest. You are not a robot.",
+            "Sharing your feelings with someone who doesn't know you or your situation can help lighten your burden."
+        ];
+
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        const quoteContainer = document.getElementById('quote-container');
+        const quoteDiv = document.createElement('div');
+        quoteDiv.textContent = randomQuote;
+        quoteDiv.style.fontFamily = "'Caveat', cursive";
+        quoteContainer.appendChild(quoteDiv);
+
+        
+        function enforceMaxLength(element, maxLength) {
+            if (element.value.length > maxLength) {
+            element.value = element.value.slice(0, maxLength);
+            }
+        }
+    </script>
+</body>
+</html>
