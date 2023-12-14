@@ -60,7 +60,7 @@ app.post('/', (req, res) => {
             return res.render("/", {status: "Failed to submit."});
         }
 
-        targetWords = []; // I'll leave this blank for now.
+        targetWords = ["mamatay", "Mamatay", "pumatay", "patay", "Patay"]; // I'll leave this blank for now.
         checkWords(content, targetWords, res);
         renderContent(req, res, status = "Successfully submitted");
     });
