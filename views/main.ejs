@@ -26,8 +26,7 @@
             <% if (contentData.length > 0) { %>
                 <% for (const content of contentData) { %>
                     <div class="message-box">
-                        <!-- <p style="color: rgb(125, 125, 125);"><%= content.ID %></p> -->
-                        <p></p>
+                        <p style="color: rgb(125, 125, 125);"><%= content.ID %></p>
                         <p class="content-message"><%= content.Content %></p>
                     </div>
                 <% } %>
@@ -49,7 +48,8 @@
             "Sometimes, it's okay to give up for a while. Take a break, fix things, then try again. Giving up doesn't mean you've lost. There's always another chance.",
             "Just as the sun rises after a dark night, there is hope for brighter days ahead. It's okay to acknowledge and experience sadness, but remember, there will come a time when you'll find happiness again.",
             "I have a method that works really well for me when I'm feeling down. Make yourself comfortable, close your eyes, and think about everything that makes you sad. Cry as much as you want, and if you feel that it has been 3 minutes already, then open your eyes and smile.",
-            "Jealousy will always stop you from achieving what you want."
+            "Jealousy will always stop you from achieving what you want.",
+            "Hindi ka nag-iisa"
         ];
 
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
