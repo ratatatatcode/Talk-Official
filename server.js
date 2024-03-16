@@ -62,8 +62,13 @@ app.post('/', (req, res) => {
 
         targetWords = ["mamatay", "Mamatay", "pumatay", "patay", "Patay"]; // I'll leave this blank for now.
         checkWords(content, targetWords, res);
-        renderContent(req, res, status = "Successfully submitted");
+        res.redirect('/smile');
     });
+});
+
+app.get('/smile', (req, res) => {
+    let status = "Smile 😉"
+    renderContent(req, res, status);
 });
 
 app.listen(3000, () => {
