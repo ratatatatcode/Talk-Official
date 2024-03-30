@@ -1,5 +1,6 @@
-#TALK
-A place to share your rants/story anonymously.
+# Talk
 
-Build using Node.JS + (HTML, CSS, JS)
-https://talk-official.onrender.com/
+## Introduction
+Talk is a platform designed for users to share their rants, stories, or thoughts anonymously. It provides a safe space for expression without the fear of judgment or repercussions.
+
+**Live Demo**: [Talk Platform](https://talk-official.onrender.com/)
