@@ -21,7 +21,7 @@
         <form class="form-1" action="/" method="post">
             <!-- <textarea name="content" rows="10" placeholder="Don't forget to smile before you leave this website."></textarea> -->
             <textarea required oninput="enforceMaxLength(this, 150)" name="content" rows="10" placeholder="Don't forget to smile before you leave this website."></textarea>
-            <button input="submit">Submit</button>
+            <!-- <button input="submit">Submit</button> -->
         </form>
         
         <p><%= status %></p>
@@ -30,7 +30,8 @@
             <% if (contentData.length > 0) { %>
                 <% for (const content of contentData) { %>
                     <div class="message-box">
-                        <p style="color: rgb(200, 200, 200);"><%= content.ID %></p>
+                        <!-- <p style="color: rgb(200, 200, 200);"><%= content.ID %></p> -->
+                        <p></p>
                         <p class="content-message"><%= content.Content %></p>
                     </div>
                 <% } %>
