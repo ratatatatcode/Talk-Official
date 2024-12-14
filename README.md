@@ -9,7 +9,7 @@ No individual reactions were included to prevent users from feeling ignored, and
 You may experience some lag due to the website being hosted on a free server.
 
 ## Developer
-James Michael D. Magnaye
+James Michael D. Magnaye<br>
 CS 3102 | IT 321 - Human-Computer Interaction
 
 ## Features
