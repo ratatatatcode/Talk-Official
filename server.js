@@ -42,7 +42,7 @@ function checkWords (sentence, targetWords, req, res) {
 }
 
 app.get('/', (req, res) => {
-    let status = ": )"
+    let status = "Don't worry; your story is safe with me."
     renderContent(req, res, status);
 });
 
@@ -50,7 +50,6 @@ let lastSubmittedContent = null;
 
 app.post('/', (req, res) => {
     let content = req.body.content;
-    let status = "";
 
     const contentInsertQuery = "INSERT INTO ContentTable (Content) VALUES (?)";
 
@@ -62,14 +61,15 @@ app.post('/', (req, res) => {
 
         targetWords = ["mamatay", "Mamatay", "pumatay", "patay", "Patay"]; // I'll leave this blank for now.
         checkWords(content, targetWords, res);
-        res.redirect('/smile');
+        let status = "Your post has been submitted. Smile! Hope you’re doing fine! 😉"
+        renderContent(req, res, status);
     });
 });
 
-app.get('/smile', (req, res) => {
-    let status = "Smile 😉"
-    renderContent(req, res, status);
-});
+// app.get('/smile', (req, res) => {
+//     let status = "Smile 😉"
+//     renderContent(req, res, status);
+// });
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');

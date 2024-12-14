@@ -13,15 +13,15 @@
 </head>
 <body>
     <div class="container">
-        <div style="margin: 40px; font-size: 1.2rem;" id="quote-container"></div>
+        <div style="margin: 40px; font-size: 1.4rem;" id="quote-container"></div>
         <h1>Share What's On Your Mind...</h1>
         <i>No one will know it's you.</i>
-        <p style="display: flex; text-align: center;">Hi! I apologize for the long delay in opening this page.<br>It will be better soon!</p>
+        <!-- <p style="display: flex; text-align: center;">Hi! I apologize for the long delay in opening this page.<br>It will be better soon!</p> -->
         <!-- <i class='bx bxl-telegram'>@hotdoggulaman</i> -->
         <form class="form-1" action="/" method="post">
             <!-- <textarea name="content" rows="10" placeholder="Don't forget to smile before you leave this website."></textarea> -->
             <textarea required oninput="enforceMaxLength(this, 150)" name="content" rows="10" placeholder="Don't forget to smile before you leave this website."></textarea>
-            <!-- <button input="submit">Submit</button> -->
+            <button input="submit">Submit</button>
         </form>
         
         <p><%= status %></p>
