@@ -5,7 +5,7 @@ Talk is a platform designed for users to share their rants, stories, or thoughts
 
 No individual reactions were included to prevent users from feeling ignored, and comments or replies were disabled to avoid potential hate speech.
 
-**Live Demo**: [Talk Platform](https://talk-official.onrender.com/)
+**Live Demo**: [Talk Platform](https://talk-official.onrender.com/) <br>
 You may experience some lag due to the website being hosted on a free server.
 
 ## Features
