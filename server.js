@@ -48,7 +48,6 @@ app.post('/', (req, res) => {
             return res.render("/", {status: "Failed to submit."});
         }
 
-        // Redirect to the same page after form submission to avoid resubmission on refresh
         let status = "Your post has been submitted. Smile! Hope you’re doing fine! 😉";
         res.redirect('/?status=' + encodeURIComponent(status));
     });
@@ -70,7 +69,6 @@ app.post('/feedback', (req, res) => {
             return res.render("/feedback", {status: "Failed to submit."});
         }
 
-        // Redirect to the same page after form submission to avoid resubmission on refresh
         let status = "Your post has been submitted. Thank you for your feedback!";
         res.redirect('/feedback/?status=' + encodeURIComponent(status));
     });

@@ -64,14 +64,19 @@ button {
     resize: none;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease-in-out; 
 
     /* background-color: #fff; */
 
     /* border-radius: 15px;
     border-radius: 16px;
     background: #f5f5f5;
-    box-shadow: 9px 9px 18px #d0d0d0, -9px -9px 18px #ffffff;
-    transition: all 0.3s ease-in-out; */
+    box-shadow: 9px 9px 18px #d0d0d0, -9px -9px 18px #ffffff;*/
+}
+
+button:hover {
+    scale: 1.2;
+    color: green;
 }
 
 .feedback {
@@ -96,6 +101,10 @@ button {
     background: #f5f5f5;
     box-shadow: 9px 9px 18px #d0d0d0, -9px -9px 18px #ffffff;
     transition: all 0.3s ease-in-out;
+}
+
+.feedback:hover {
+    scale: 1.2;
 }
 
 /* button:hover {
