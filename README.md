@@ -15,6 +15,7 @@ CS 3102 | IT 321 - Human-Computer Interaction
 ## Features
 The home page demonstrates emotional design with calming visuals, motivational prompts, and a clean, user-friendly layout. It fosters trust and emotional engagement through anonymity and subtle feedback mechanisms. Navigation is intuitive, with easy access to all main features without unnecessary steps, ensuring a smooth and direct user experience. The responsive design ensures consistent usability across devices.
 
+- Neumorphism design creates a sense of comfort, sophistication, and interactivity through its use of gentle shapes, soft shadows, and tactile elements, fostering a modern, intuitive, and engaging user experience.
 - Random quotes appear with each refresh, giving you a chance to lighten your mood or learn from them.
 - "Your post has been submitted. Smile! Hope you’re doing fine! 😉" will appear when the data is successfully posted.
 - Inappropriate word filter: For example, if you type 'p-t-y,' the form will no longer accept your submission.
