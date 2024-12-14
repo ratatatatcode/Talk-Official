@@ -126,8 +126,6 @@ button {
     text-align: center;
     font-size: 0.85rem;
     color: rgb(47, 47, 47);
-    word-wrap: break-word;
-    word-break: break-all;
     transform: translateY(-30px);
 }
 

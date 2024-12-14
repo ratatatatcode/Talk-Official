@@ -42,7 +42,7 @@ function checkWords (sentence, targetWords, req, res) {
 }
 
 app.get('/', (req, res) => {
-    let status = "Don't worry; your story is safe with me."
+    let status = req.query.status || "Don't worry; your story is safe with me.";
     renderContent(req, res, status);
 });
 
@@ -59,10 +59,12 @@ app.post('/', (req, res) => {
             return res.render("/", {status: "Failed to submit."});
         }
 
-        targetWords = ["mamatay", "Mamatay", "pumatay", "patay", "Patay"]; // I'll leave this blank for now.
+        targetWords = ["mamatay", "Mamatay", "pumatay", "patay", "Patay"]; // Words to check
         checkWords(content, targetWords, res);
-        let status = "Your post has been submitted. Smile! Hope you’re doing fine! 😉"
-        renderContent(req, res, status);
+
+        // Redirect to the same page after form submission to avoid resubmission on refresh
+        let status = "Your post has been submitted. Smile! Hope you’re doing fine! 😉";
+        res.redirect('/?status=' + encodeURIComponent(status));
     });
 });
 
