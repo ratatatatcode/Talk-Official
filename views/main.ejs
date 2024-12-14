@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/main.css">
     <link rel="shortcut icon" href="/logo/speak.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=person_alert" />
 </head>
 <body>
     <div class="container">
@@ -24,7 +25,11 @@
             <button input="submit">Submit</button>
         </form>
         
-        <p><%= status %></p>
+        <p id="status" style="color: black;"><%= status %></p>
+
+        <a href="/feedback" class="feedback">
+            <span class="material-symbols-outlined" style="margin-right: 10px;">person_alert</span>Feedback
+        </a>
 
         <div class="grid-container">
             <% if (contentData.length > 0) { %>
@@ -44,6 +49,33 @@
     </div>
 
     <script>
+        const form = document.querySelector(".form-1");
+        const input = document.querySelector("textarea");
+        const status = document.getElementById("status");
+        const targetWords = ["patay", "pumatay", "mamatay"];
+    
+        function containsInappropriateWords(text) {
+            const regex = new RegExp(`\\b(${targetWords.join('|')})\\b`, 'i');
+            return regex.test(text);
+        }
+    
+        input.addEventListener("input", () => {
+            if (containsInappropriateWords(input.value)) {
+                input.setCustomValidity("Remove the inappropriate words. Thank you!");
+                status.textContent = "Avoid the use of inappropriate words.";
+            } else {
+                input.setCustomValidity("");
+                status.textContent = "Don't worry; your story is safe with me.";
+            }
+        });
+    
+        form.addEventListener("submit", (event) => {
+            if (containsInappropriateWords(input.value)) {
+                event.preventDefault();
+                status.textContent = "Form submission blocked: inappropriate words detected.";
+            }
+        });
+    
         const quotes = [
             "Always try to smile even when you are in pain. Trust me it will heal you.",
             "Life is not a race. You're not competing with anyone for your goals.",
@@ -53,18 +85,17 @@
             "Sometimes, it's okay to give up for a while. Take a break, fix things, then try again. Giving up doesn't mean you've lost. There's always another chance.",
             "Jealousy will always stop you from achieving what you want."
         ];
-
+    
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
         const quoteContainer = document.getElementById('quote-container');
         const quoteDiv = document.createElement('div');
         quoteDiv.textContent = randomQuote;
         quoteDiv.style.fontFamily = "'Caveat', cursive";
         quoteContainer.appendChild(quoteDiv);
-
-        
+    
         function enforceMaxLength(element, maxLength) {
             if (element.value.length > maxLength) {
-            element.value = element.value.slice(0, maxLength);
+                element.value = element.value.slice(0, maxLength);
             }
         }
     </script>

@@ -30,17 +30,6 @@ function renderContent(req, res, status) {
         });
 }
 
-function checkWords (sentence, targetWords, req, res) {
-    const words = sentence.split(/\s+/);
-    for (let count = 0; count < words.length; count++) {
-        const currentWords = words[count];
-        if (targetWords.includes(currentWords)) {
-            let status = "Avoid the use of inappropriate words."
-            renderContent(res, req, status)
-        }
-    }
-}
-
 app.get('/', (req, res) => {
     let status = req.query.status || "Don't worry; your story is safe with me.";
     renderContent(req, res, status);
@@ -59,12 +48,31 @@ app.post('/', (req, res) => {
             return res.render("/", {status: "Failed to submit."});
         }
 
-        targetWords = ["mamatay", "Mamatay", "pumatay", "patay", "Patay"]; // Words to check
-        checkWords(content, targetWords, res);
-
         // Redirect to the same page after form submission to avoid resubmission on refresh
         let status = "Your post has been submitted. Smile! Hope you’re doing fine! 😉";
         res.redirect('/?status=' + encodeURIComponent(status));
+    });
+});
+
+app.get('/feedback', (req, res) => {
+    let status = req.query.status || "Feel free to share your thoughts.";
+    return res.render("feedback.ejs", {status: status})
+});
+
+app.post('/feedback', (req, res) => {
+    let content = req.body.content;
+
+    const contentInsertQuery = "INSERT INTO Feedback (feedback) VALUES (?)";
+
+    db.query(contentInsertQuery, content, (err, results) => {
+        if(err) {
+            console.error(err);
+            return res.render("/feedback", {status: "Failed to submit."});
+        }
+
+        // Redirect to the same page after form submission to avoid resubmission on refresh
+        let status = "Your post has been submitted. Thank you for your feedback!";
+        res.redirect('/feedback/?status=' + encodeURIComponent(status));
     });
 });
 
