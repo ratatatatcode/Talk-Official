@@ -32,3 +32,4 @@ The feedback page promotes emotional engagement by providing a safe space for us
 - **HTML**: Structure of web pages.
 - **CSS**: Styling for web pages.
 - **JavaScript**: Frontend interactivity and functionality.
+- **SQL**: Hosted on the Aiven Database.
