@@ -3,9 +3,9 @@
 
 Talk is a platform designed for users to share their rants, stories, or thoughts anonymously. It provides a safe space for expression without the fear of judgment or repercussions.
 
-No individual reactions were included to prevent users from feeling ignored, and comments or replies were disabled to avoid potential hate speech.
+To ensure a positive environment, there are no individual reactions or comments on posts, preventing users from feeling ignored or encountering hate speech.
 
-Neumorphism design creates a sense of comfort, sophistication, and interactivity through its use of gentle shapes, soft shadows, and tactile elements, fostering a modern, intuitive, and engaging user experience.
+The platform incorporates Neumorphism design, which uses gentle shapes, soft shadows, and tactile elements to create a sense of comfort, sophistication, and interactivity. This design fosters a modern, intuitive, and engaging user experience.
 
 **Live Demo**: [Talk Platform](https://talk-official.onrender.com/) <br>
 You may experience some lag due to the website being hosted on a free server.
@@ -15,19 +15,27 @@ James Michael D. Magnaye<br>
 CS 3102 | IT 321 - Human-Computer Interaction
 
 ## Features
+The landing page serves as the introduction to the Talk platform. It is designed to engage users immediately and explain the purpose of the platform in an inviting, welcoming way. It provides an overview of what Talk is all about, helping users understand the platform's intent and mission before diving into the full experience.
+
+- Introductory Text: A description of Talk as a platform for anonymous expression and support.
+- Call to Action: Buttons guiding users to either Listen to Text or Get Started.
+- Accessibility: The "Listen to Text" button uses Speech Synthesis for an inclusive experience.
+
+![Landing](static/readme/Landing.png)
+
 The home page demonstrates emotional design with calming visuals, motivational prompts, and a clean, user-friendly layout. It fosters trust and emotional engagement through anonymity and subtle feedback mechanisms. Navigation is intuitive, with easy access to all main features without unnecessary steps, ensuring a smooth and direct user experience. The responsive design ensures consistent usability across devices.
 
-- Random quotes appear with each refresh, giving you a chance to lighten your mood or learn from them.
-- The submit button turns green and changes scale when hovered, and the feedback button scales to 1.2 times its size when hovered.
-- "Your post has been submitted. Smile! Hope you’re doing fine! 😉" will appear when the data is successfully posted.
-- Inappropriate word filter: For example, if you type 'p-t-y,' the form will no longer accept your submission.
+- Random Quotes: A random motivational quote is displayed with each refresh.
+- Interactive Submit Button: The submit button turns green and changes scale on hover, providing visual feedback to users.
+- Successful Submission Message: "Your post has been submitted. Smile! Hope you’re doing fine! 😉" will appear when the data is successfully posted.
+- Inappropriate Word Filter: The platform will reject inappropriate content, such as words like "p-t-y."
 
 ![Home](static/readme/Home.png)
 
 The feedback page promotes emotional engagement by providing a safe space for users to share their thoughts. The clean, minimalistic design encourages user participation, while subtle feedback mechanisms like success messages enhance the experience. The page is fully responsive, ensuring accessibility and usability across different devices.
 
-- The submit button turns green and changes scale when hovered, and the back button scales to 1.2 times its size when hovered.
-- "Your post has been submitted. Thank you for your feedback!" will appear when the data is successfully posted.
+- Interactive Buttons: The submit button turns green and changes scale on hover, while the back button scales to 1.2x its size.
+- Success Message: After submitting feedback, the message "Your post has been submitted. Thank you for your feedback!" appears.
   
 ![Feedback](static/readme/Feedback.png)
 
