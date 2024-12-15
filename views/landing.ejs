@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk</title>
+    <link rel="stylesheet" href="/landing.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <div class="landing-container">
+        <div class="left">
+            <h1>Talk: Your Safe Space for Anonymous Expression</h1>
+            <p id="intro-text">"Talk" is a platform designed for users to share their rants, stories, or thoughts anonymously. It offers a judgment-free zone for honest expression without the worry of reactions, comments, or replies, ensuring a supportive and hate-free environment for everyone.</p>
+            
+            <div class="buttons">
+                <button class="feedback listen" onclick="readText()">
+                    <span class="material-symbols-outlined">volume_up</span> Listen to Text
+                </button>
+
+                <a href="/share" class="feedback">
+                    <span class="material-symbols-outlined">start</span> Get Started
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <img src="/landing-right.png" alt="Illustration representing anonymous expression">
+        </div>
+    </div>
+
+    <script>
+        function readText() {
+            const text = document.getElementById('intro-text').innerText;
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = 1;
+                utterance.pitch = 1;
+                speechSynthesis.cancel();
+                speechSynthesis.speak(utterance);
+            } else {
+                alert('Speech synthesis not supported on this browser.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -30,14 +30,14 @@ function renderContent(req, res, status) {
         });
 }
 
-app.get('/', (req, res) => {
+app.get('/share', (req, res) => {
     let status = req.query.status || "Don't worry; your story is safe with me.";
     renderContent(req, res, status);
 });
 
 let lastSubmittedContent = null;
 
-app.post('/', (req, res) => {
+app.post('/share', (req, res) => {
     let content = req.body.content;
 
     const contentInsertQuery = "INSERT INTO ContentTable (Content) VALUES (?)";
@@ -49,7 +49,7 @@ app.post('/', (req, res) => {
         }
 
         let status = "Your post has been submitted. Smile! Hope you’re doing fine! 😉";
-        res.redirect('/?status=' + encodeURIComponent(status));
+        res.redirect('/share/?status=' + encodeURIComponent(status));
     });
 });
 
@@ -73,6 +73,10 @@ app.post('/feedback', (req, res) => {
         res.redirect('/feedback/?status=' + encodeURIComponent(status));
     });
 });
+
+app.get('/', (req, res) => {
+    return res.render("landing.ejs");
+})
 
 // app.get('/smile', (req, res) => {
 //     let status = "Smile 😉"
