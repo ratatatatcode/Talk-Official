@@ -1,5 +1,5 @@
 ## Developer
-[22-02172] James Michael D. Magnaye<br>
+James Michael D. Magnaye | 22-02172<br>
 CS 3102 | IT 321 - Human-Computer Interaction
 
 # **TALK**
