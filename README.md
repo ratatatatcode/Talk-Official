@@ -1,3 +1,7 @@
+## Developer
+[22-02172] James Michael D. Magnaye<br>
+CS 3102 | IT 321 - Human-Computer Interaction
+
 # **TALK**
 <img src="static/logo/speak.png" alt="Logo" style="width: 75px; height: 75px;">
 
@@ -9,10 +13,6 @@ The platform incorporates Neumorphism design, which uses gentle shapes, soft sha
 
 **Live Demo**: [Talk Platform](https://talk-official.onrender.com/) <br>
 You may experience some lag due to the website being hosted on a free server.
-
-## Developer
-James Michael D. Magnaye<br>
-CS 3102 | IT 321 - Human-Computer Interaction
 
 ## Features
 The landing page serves as the introduction to the Talk platform. It is designed to engage users immediately and explain the purpose of the platform in an inviting, welcoming way. It provides an overview of what Talk is all about, helping users understand the platform's intent and mission before diving into the full experience.
